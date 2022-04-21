@@ -55,14 +55,12 @@ Matrix& readFromFile(Matrix& matrix, istream& fin)
 	{
 		for (int j = 0; j < Colls; j++)
 		{
-
 			if (fin.eof())
 			{
 				throw 404;
 			}
 			fin >> value;
 			matrix.setMij(i, j, value);
-
 		}
 	}
 

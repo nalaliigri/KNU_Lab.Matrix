@@ -20,13 +20,16 @@ int findSum31(Matrix& matrix)
 			k--;
 		}
 	}
-	for (int i = k; i < Rows; i++)
+	else
 	{
-		for (int j = k - 1; j <= i; j++)
+		for (int i = k; i < Rows; i++)
 		{
-			sum += matrix.getMij(i, j);
+			for (int j = k - 1; j <= i; j++)
+			{
+				sum += matrix.getMij(i, j);
+			}
+			k--;
 		}
-		k--;
 	}
 	return sum;
 }
